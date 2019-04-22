@@ -1,0 +1,76 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.root{
+	-fx-background-color: rgb(0,0,0,1);
+	/*-fx-background-image: url("/application/back2.jpg");*/
+}   
+.choice-box {
+  -fx-mark-color: green ;
+  -fx-background-color: #FFFFFF;
+  -fx-background-fills: blue;
+}
+#portChoose{
+	
+	-fx-background-color: 
+        #090a0c,
+        linear-gradient(#58626b 0%, #3f5459 20%, #393d52 100%),
+        linear-gradient(#40464b, #243d44),
+        radial-gradient(center 50% 0%, radius 100%, rgba(160,180,200,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 3,2,2,3;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: yellow;
+    -fx-font-family: "Arial";
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+
+}
+.button {
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 10px;
+
+}
+.button:hover {
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#70424b 0%, #1f2429 20%, #291d22 100%),
+        linear-gradient(#50262b, #391d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(140,141,168,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+
+}
+#passwordShow{
+	-fx-background-color: null;
+    
+}
+#sendData{
+	
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 16px;
+}
+
+.label{
+    -fx-font-size: 64px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+

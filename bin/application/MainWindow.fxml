@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.PhongMaterial?>
+<?import javafx.scene.shape.MeshView?>
+<?import javafx.scene.shape.TriangleMesh?>
+<?import javafx.scene.PerspectiveCamera?>
+<?import javafx.scene.SubScene?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.web.HTMLEditor?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Button?>
+
+<GridPane fx:id="rootPane" xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1">
+	<stylesheets>
+		<URL value="@application.css" />
+	</stylesheets>
+
+	<rowConstraints>
+		<RowConstraints percentHeight="100.0" />
+	</rowConstraints>
+
+	<columnConstraints>
+		<ColumnConstraints percentWidth="100.0" />
+	</columnConstraints>
+
+	<children>
+		<GridPane id="mainGrid">
+			<stylesheets>
+				<URL value="@application.css" />
+			</stylesheets>
+
+			<rowConstraints>
+				<RowConstraints percentHeight="100.0" />
+			</rowConstraints>
+
+			<columnConstraints>
+				<ColumnConstraints percentWidth="100.0" />
+			</columnConstraints>
+
+			<children>
+
+				<ImageView id="frontImage" fitHeight="150" fitWidth="636"
+					pickOnBounds="true" GridPane.columnIndex="0" GridPane.rowIndex="0"
+					GridPane.rowSpan="2">
+					<image>
+						<Image url="/application/front.png" />
+					</image>
+					<GridPane.margin>
+						<Insets left="150.0" bottom="740.0" />
+					</GridPane.margin>
+				</ImageView>
+
+				<ImageView id="backImage" fitHeight="600" fitWidth="936"
+					pickOnBounds="true" GridPane.columnIndex="0" GridPane.rowIndex="0"
+					GridPane.rowSpan="2">
+					<image>
+						<Image url="/application/joy.png" />
+					</image>
+				</ImageView>
+
+				
+
+				<TextField id="password" text="" maxWidth="200"
+					minWidth="100" pickOnBounds="true" GridPane.columnIndex="0"
+					GridPane.rowIndex="0">
+					<GridPane.margin>
+						<Insets left="370.0" bottom="600.0" />
+					</GridPane.margin>
+				</TextField>
+
+				<Button id="passwordShow" text="" maxWidth="30"
+					maxHeight="20" pickOnBounds="true" GridPane.columnIndex="0"
+					GridPane.rowIndex="0">
+					<GridPane.margin>
+						<Insets left="454.0" bottom="400.0" />
+					</GridPane.margin>
+				</Button>
+				
+				<Button id="enter" text="-&gt;" maxWidth="40" maxHeight="40"
+					pickOnBounds="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+					<GridPane.margin>
+						<Insets left="554.0" bottom="600.0" />
+					</GridPane.margin>
+				</Button>
+
+				<Circle pickOnBounds="true" id="F4" fill="GREEN"
+					radius="32.0" stroke="BLACK" GridPane.columnIndex="0"
+					GridPane.rowIndex="0">
+					<GridPane.margin>
+						<Insets left="703.0" bottom="250.0" />
+					</GridPane.margin>
+				</Circle>
+				
+				<Circle pickOnBounds="true" id="F2" fill="ORANGE"
+					radius="32.0" stroke="BLACK" GridPane.columnIndex="0"
+					GridPane.rowIndex="0">
+					<GridPane.margin>
+						<Insets left="703.0" top="20.0" />
+					</GridPane.margin>
+				</Circle>
+				
+				<Circle pickOnBounds="true" id="F3" fill="RED" radius="32.0"
+					stroke="BLACK" GridPane.columnIndex="0" GridPane.rowIndex="0">
+					<GridPane.margin>
+						<Insets left="773.0" bottom="115.0" />
+					</GridPane.margin>
+				</Circle>
+				
+				<Circle pickOnBounds="true" id="F1" fill="BLUE" radius="32.0"
+					stroke="BLACK" GridPane.columnIndex="0" GridPane.rowIndex="0">
+					<GridPane.margin>
+						<Insets left="633.0" bottom="115.0" />
+					</GridPane.margin>
+				</Circle>
+
+				<ImageView id="cross" fitHeight="156" fitWidth="156"
+					pickOnBounds="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+					<image>
+						<Image url="/application/cross.png" />
+					</image>
+					<GridPane.margin>
+						<Insets left="120.0" bottom="124.0" />
+					</GridPane.margin>
+				</ImageView>
+
+				<Circle id="leftJoyButton" pickOnBounds="true" fill="DimGray"
+					radius="60.0" stroke="GRAY" GridPane.columnIndex="0"
+					GridPane.rowIndex="0">
+					<GridPane.margin>
+						<Insets left="270.0" top="190.0" />
+					</GridPane.margin>
+				</Circle>
+				
+				<ImageView id="leftLeft" fitHeight="32" fitWidth="32"
+					pickOnBounds="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+					<image>
+						<Image url="/application/kapali_left.png" />
+					</image>
+					<GridPane.margin>
+						<Insets left="270.0" top="190.0" />
+					</GridPane.margin>
+				</ImageView>
+				
+				<ImageView id="leftRight" fitHeight="32" fitWidth="32"
+					pickOnBounds="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+					<image>
+						<Image url="/application/kapali_right.png" />
+					</image>
+					<GridPane.margin>
+						<Insets left="360.0" top="190.0" />
+					</GridPane.margin>
+				</ImageView>
+				
+				<ImageView id="leftTop" fitHeight="32" fitWidth="32"
+					pickOnBounds="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+					<image>
+						<Image url="/application/kapali_up.png" />
+					</image>
+					<GridPane.margin>
+						<Insets left="315.0" top="100.0" />
+					</GridPane.margin>
+				</ImageView>
+				
+				<ImageView id="leftBottom" fitHeight="32" fitWidth="32"
+					pickOnBounds="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+					<image>
+						<Image url="/application/kapali_down.png" />
+					</image>
+					<GridPane.margin>
+						<Insets left="315.0" top="290.0" />
+					</GridPane.margin>
+				</ImageView>
+				
+				<ImageView id="leftStick" fitHeight="56" fitWidth="56"
+					pickOnBounds="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+					<image>
+						<Image url="/application/jog.png" />
+					</image>
+					<GridPane.margin>
+						<Insets left="304.0" top="194.0" />
+					</GridPane.margin>
+				</ImageView>
+
+				<Circle id="rightJoyButton" pickOnBounds="true"
+					fill="DimGray" radius="60.0" stroke="GRAY" GridPane.columnIndex="0"
+					GridPane.rowIndex="0">
+					<GridPane.margin>
+						<Insets left="540.0" top="190.0" />
+					</GridPane.margin>
+				</Circle>
+
+				<ImageView id="rightLeft" fitHeight="32" fitWidth="32"
+					pickOnBounds="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+					<image>
+						<Image url="/application/kapali_left.png" />
+					</image>
+					<GridPane.margin>
+						<Insets left="540.0" top="190.0" />
+					</GridPane.margin>
+				</ImageView>
+				
+				<ImageView id="rightRight" fitHeight="32" fitWidth="32"
+					pickOnBounds="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+					<image>
+						<Image url="/application/kapali_right.png" />
+					</image>
+					<GridPane.margin>
+						<Insets left="630.0" top="190.0" />
+					</GridPane.margin>
+				</ImageView>
+				
+				<ImageView id="rightTop" fitHeight="32" fitWidth="32"
+					pickOnBounds="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+					<image>
+						<Image url="/application/kapali_up.png" />
+					</image>
+					<GridPane.margin>
+						<Insets left="585.0" top="100.0" />
+					</GridPane.margin>
+				</ImageView>
+				
+				<ImageView id="rightBottom" fitHeight="32" fitWidth="32"
+					pickOnBounds="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+					<image>
+						<Image url="/application/kapali_down.png" />
+					</image>
+					<GridPane.margin>
+						<Insets left="585.0" top="290.0" />
+					</GridPane.margin>
+				</ImageView>
+				
+				<ImageView id="rightStick" fitHeight="56" fitWidth="56"
+					pickOnBounds="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+					<image>
+						<Image url="/application/jog.png" />
+					</image>
+					<GridPane.margin>
+						<Insets left="574.0" top="194.0" />
+					</GridPane.margin>
+				</ImageView>
+
+				<ImageView id="Left" fitHeight="32" fitWidth="16"
+					pickOnBounds="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+					<image>
+						<Image url="/application/nleft.png" />
+					</image>
+					<GridPane.margin>
+						<Insets left="144.0" bottom="120.0" />
+					</GridPane.margin>
+				</ImageView>
+				<ImageView id="Right" fitHeight="32" fitWidth="16"
+					pickOnBounds="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+					<image>
+						<Image url="/application/nright.png" />
+					</image>
+					<GridPane.margin>
+						<Insets left="240.0" bottom="120.0" />
+					</GridPane.margin>
+				</ImageView>
+				<ImageView id="Top" fitHeight="16" fitWidth="32"
+					pickOnBounds="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+					<image>
+						<Image url="/application/nup.png" />
+					</image>
+					<GridPane.margin>
+						<Insets left="182.0" bottom="220.0" />
+					</GridPane.margin>
+				</ImageView>
+				<ImageView id="Bottom" fitHeight="16" fitWidth="32"
+					pickOnBounds="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+					<image>
+						<Image url="/application/ndown.png" />
+					</image>
+					<GridPane.margin>
+						<Insets left="182.0" bottom="20.0" />
+					</GridPane.margin>
+				</ImageView>
+
+				<ImageView id="back" fitHeight="36" fitWidth="50"
+					pickOnBounds="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+					<image>
+						<Image url="/application/buttonnormal.png" />
+					</image>
+					<GridPane.margin>
+						<Insets left="346.0" bottom="254.0" />
+					</GridPane.margin>
+				</ImageView>
+
+				<ImageView id="start" fitHeight="36" fitWidth="50"
+					pickOnBounds="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+					<image>
+						<Image url="/application/buttonnormal.png" />
+					</image>
+					<GridPane.margin>
+						<Insets left="540.0" bottom="254.0" />
+					</GridPane.margin>
+				</ImageView>
+
+				<ImageView id="rb" fitHeight="48" fitWidth="76"
+					pickOnBounds="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+					<image>
+						<Image url="/application/lb.png" />
+					</image>
+					<GridPane.margin>
+						<Insets left="640.0" bottom="820.0" />
+					</GridPane.margin>
+				</ImageView>
+				<ImageView id="rt" fitHeight="78" fitWidth="74"
+					pickOnBounds="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+					<image>
+						<Image url="/application/lt.png" />
+					</image>
+					<GridPane.margin>
+						<Insets left="640.0" bottom="680.0" />
+					</GridPane.margin>
+				</ImageView>
+
+				<ImageView id="lb" fitHeight="48" fitWidth="76"
+					pickOnBounds="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+					<image>
+						<Image url="/application/rb.png" />
+					</image>
+					<GridPane.margin>
+						<Insets left="226.0" bottom="820.0" />
+					</GridPane.margin>
+				</ImageView>
+				<ImageView id="lt" fitHeight="78" fitWidth="74"
+					pickOnBounds="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+					<image>
+						<Image url="/application/rt.png" />
+					</image>
+					<GridPane.margin>
+						<Insets left="226.0" bottom="680.0" />
+					</GridPane.margin>
+				</ImageView>
+
+				<ImageView id="exitButton" fitHeight="144" fitWidth="144"
+					pickOnBounds="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+					<image>
+						<Image url="/application/exit.png" />
+					</image>
+					<GridPane.margin>
+						<Insets left="860.0" bottom="650.0" />
+					</GridPane.margin>
+				</ImageView>
+
+				<ImageView id="asel" fitHeight="78" fitWidth="102"
+					pickOnBounds="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+					<image>
+						<Image url="/application/aselsanlogo.png" />
+					</image>
+					<GridPane.margin>
+						<Insets left="416.0" bottom="188.0" />
+					</GridPane.margin>
+				</ImageView>
+
+
+
+			</children>
+
+		</GridPane>
+
+	</children>
+
+</GridPane>

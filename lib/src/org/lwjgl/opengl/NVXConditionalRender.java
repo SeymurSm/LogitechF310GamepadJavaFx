@@ -1,0 +1,82 @@
+/*
+ * Copyright LWJGL. All rights reserved.
+ * License terms: http://lwjgl.org/license.php
+ * MACHINE GENERATED FILE, DO NOT EDIT
+ */
+package org.lwjgl.opengl;
+
+import org.lwjgl.system.*;
+
+import static org.lwjgl.system.Checks.*;
+import static org.lwjgl.system.JNI.*;
+
+/**
+ * Native bindings to the <a href="http://www.opengl.org/registry/specs/NVX/conditional_render.txt">NVX_conditional_render</a> extension.
+ * 
+ * <p>This extension provides support for conditional rendering based on the
+ * results of an occlusion query.  This mechanism allows an application to
+ * potentially reduce the latency between the completion of an occlusion
+ * query and the rendering commands depending on its result.  It additionally
+ * allows the decision of whether to render to be made without application
+ * intervention.</p>
+ * 
+ * <p>Requires {@link GL15 OpenGL 1.5} or {@link ARBOcclusionQuery ARB_occlusion_query}</p>
+ */
+public class NVXConditionalRender {
+
+	/** Function address. */
+	@JavadocExclude
+	public final long
+		BeginConditionalRenderNVX,
+		EndConditionalRenderNVX;
+
+	@JavadocExclude
+	protected NVXConditionalRender() {
+		throw new UnsupportedOperationException();
+	}
+
+	@JavadocExclude
+	public NVXConditionalRender(FunctionProvider provider) {
+		BeginConditionalRenderNVX = provider.getFunctionAddress("glBeginConditionalRenderNVX");
+		EndConditionalRenderNVX = provider.getFunctionAddress("glEndConditionalRenderNVX");
+	}
+
+	// --- [ Function Addresses ] ---
+
+	/** Returns the {@link NVXConditionalRender} instance of the current context. */
+	public static NVXConditionalRender getInstance() {
+		return getInstance(GL.getCapabilities());
+	}
+
+	/** Returns the {@link NVXConditionalRender} instance of the specified {@link GLCapabilities}. */
+	public static NVXConditionalRender getInstance(GLCapabilities caps) {
+		return checkFunctionality(caps.__NVXConditionalRender);
+	}
+
+	static NVXConditionalRender create(java.util.Set<String> ext, FunctionProvider provider) {
+		if ( !ext.contains("GL_NVX_conditional_render") ) return null;
+
+		NVXConditionalRender funcs = new NVXConditionalRender(provider);
+
+		boolean supported = checkFunctions(
+			funcs.BeginConditionalRenderNVX, funcs.EndConditionalRenderNVX
+		);
+
+		return GL.checkExtension("GL_NVX_conditional_render", funcs, supported);
+	}
+
+	// --- [ glBeginConditionalRenderNVX ] ---
+
+	public static void glBeginConditionalRenderNVX(int id) {
+		long __functionAddress = getInstance().BeginConditionalRenderNVX;
+		callIV(__functionAddress, id);
+	}
+
+	// --- [ glEndConditionalRenderNVX ] ---
+
+	public static void glEndConditionalRenderNVX() {
+		long __functionAddress = getInstance().EndConditionalRenderNVX;
+		callV(__functionAddress);
+	}
+
+}

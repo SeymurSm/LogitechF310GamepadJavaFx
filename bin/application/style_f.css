@@ -1,0 +1,40 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.root{
+	-fx-background-color: rgb(0,0,0,1);
+	/*-fx-background-image: url("/application/back2.jpg");*/
+}   
+
+.button:hover {
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#80424b 0%, #af2429 20%, #501d22 100%),
+        linear-gradient(#60262b, #401d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(200,150,160,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+
+}
+.button {
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#70424b 0%, #1f2429 20%, #291d22 100%),
+        linear-gradient(#50262b, #391d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(140,141,168,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 10px;
+
+}
+
+
+
